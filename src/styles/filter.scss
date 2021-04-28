@@ -1,0 +1,45 @@
+.filter {
+	width: 100%; 
+    background-color:#fff;
+    display: flex;
+    justify-content: center;
+}
+
+.filter__wrapper {
+    width: 1200px; 
+    background-color:#fff;
+    display: flex;
+    justify-content: space-between;
+    
+    .filter__checkbox {
+
+        .filter__checkbox__check {
+            width: 20px;
+            height: 20px;
+            background: #E7E7EA;
+            border-radius: 2px;
+        }
+    
+        & span {
+            font-family: Maven Pro;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 19px;
+            color: #6E6E6E;
+        }
+    }
+
+    .filter__button--search {
+        width: 300px;
+        margin: 0 auto;
+        background: #F9F0DA;
+        border-bottom: 4px solid #be290e;
+
+        .filter__button--search input button {
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+    }
+}
