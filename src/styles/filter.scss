@@ -5,15 +5,17 @@
     justify-content: center;
 }
 
-.filter__wrapper {
-    width: 1200px; 
-    background-color:#fff;
-    display: flex;
-    justify-content: space-between;
+.checkbox {
+    padding-top: 30px;
+    padding-bottom: 38px;
     
-    .filter__checkbox {
+    .checkbox__container {
+        width: 250px;
+        // justify-content: space-around;
+        display: flex;
+        margin-top: 10px;
 
-        .filter__checkbox__check {
+        .checkbox__check {
             width: 20px;
             height: 20px;
             background: #E7E7EA;
@@ -27,19 +29,51 @@
             font-size: 20px;
             line-height: 19px;
             color: #6E6E6E;
-        }
-    }
-
-    .filter__button--search {
-        width: 300px;
-        margin: 0 auto;
-        background: #F9F0DA;
-        border-bottom: 4px solid #be290e;
-
-        .filter__button--search input button {
-            border: none;
-            outline: none;
-            background: transparent;
+            width: 125px;
         }
     }
 }
+
+.filter__switch {
+    background: #E7E7EA;
+    border-radius: 2px;
+
+    .filter__switch--major {
+        background-color: transparent;
+    }
+
+    .filter__switch--minor {
+        background-color: transparent;
+    }
+}
+
+.filter__search {
+    display: flex;
+    border-bottom: solid 1px #E7E7EA;
+    height: 30px;
+    width: 350px;
+    margin-top: 52px;
+
+    .filter__search__form-control-feedback {
+        background-image: url(../images/Vector.png);
+        width: 25px;
+        height: 25px;
+        border: none;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .filter__search__form-control {
+        font-family: Maven Pro;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #E7E7EA;
+        border: none;
+        outline: transparent;
+        width: 400px;
+    }
+}
+    

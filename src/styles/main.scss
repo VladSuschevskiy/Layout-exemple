@@ -1,7 +1,3 @@
-body {
-	cursor:row-resize;
-}
-
 .main {
 	width: 100%; 
     background-color:#E5E5E5;
@@ -9,82 +5,21 @@ body {
     justify-content: center;
 }
 
-.main-wrapper {
-	width: 1200px; 
-	display: flex;
-	margin-top: 20px;
-	margin-bottom: 88px;
-	justify-content: space-between;
+.col-3 {
+	margin: 50px 0px 70px 0px;
 	
-
-    .main__row {
-		// padding: 30px 15px 30px 15px;
-		.main__card--editional {
-			background-color: transparent;
-			width: 262px;
-			height: 141px;
-			border: 2px solid #FDFDFD;
-			box-sizing: border-box;
-			margin-top: 50px;
-		}
-
-		.main__card {
-			background-color: #fff;
-			margin-top: 50px;
-
-			.main__card__card__discription {
-				position: relative;
-				padding: 10px 10px;
-				.main__card__card__discription__title {
-					font-family: Maven Pro;
-					font-style: normal;
-					font-weight: bold;
-					font-size: 20px;
-					line-height: 23px;
-					color: #6E6E6E;
-					margin-bottom: 46px;
-				}
-
-				.main__card__card__discription__text {
-					margin-bottom: 12px;
-					font-family: Maven Pro;
-					font-style: normal;
-					font-weight: 500;
-					font-size: 20px;
-					line-height: 23px;
-					color: #6E6E6E;
-				}
-
-				.main__card__card__discription__date {
-					font-family: Maven Pro;
-					font-style: normal;
-					font-weight: 500;
-					font-size: 16px;
-					line-height: 19px;
-					color: #484B98;
-				}
-	
-				.main__card__card__discription__link {
-					margin-top: 60px;
-					
-					& a {
-						text-decoration: none;
-						font-family: Maven Pro;
-						font-style: normal;
-						font-weight: 500;
-						font-size: 16px;
-						line-height: 22px;
-						color: #6E6E6E;
-					}
-				}
-	
-				.main__card__card__discription__time {
-					position: absolute;
-					right: 10px;
-					bottom: 12px;
-				}
-			}
-		}
-	}
 }
+
+@media only screen and (max-width: 320px) {
+    .main {
+        .container {
+            display: block;
+        }
+    }
+
+    .col-3 {
+        margin: 14px 0px 14px 0px;
+    }
+}
+
 

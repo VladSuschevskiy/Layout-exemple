@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat:wght@100&display=swap');
+
+.container {
+    width: 1200px; 
+    background-color:transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation {
+    display: flex;
+    margin: 15px 0px 16px 0px;
+
+    .navigation__nav--item {
+        margin-left: 100px;
+        text-decoration: none;
+        list-style: none; 
+         
+        & a {
+            text-decoration: none;
+            font-family: Maven Pro;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            color: #fff;
+        }
+
+        & a:hover {
+            color:#E8C5ED;
+        }
+    }
+}
+
+.logo {
+    display: flex;
+
+    .logo--text {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 43px;
+        color: #fff;
+    }
+    
+    .logo--elipse {
+        width: 12px;
+        height: 12px;
+        background: #FDF1FF;
+        border-radius: 30px;
+        margin: 18px 0px 20px 3px;
+    }
+}
+ 
+
+@media (max-width: 320px) {
+    .container {
+        width: 320px; 
+    }
+
+    .logo {
+        display: flex;
+        margin: 4px 0px 8px 20px;
+    
+        .logo--text {
+            font-size: 31px;
+            line-height: 38px;
+        }
+
+        .logo--elipse {
+            width: 10px;
+            height: 10px;
+            
+        }
+    }
+
+    .navigation {
+        display: none;
+    }
+
+}
+

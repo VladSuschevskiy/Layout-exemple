@@ -5,71 +5,72 @@
     justify-content: center;
 }
 
-.footer__wrapper {
-    width: 1200px; 
-    background-color:#484B98;
+.logo--footer {
+    margin: 23px 0px 24px 0px;
+}
+
+.navigation--footer {
+    margin: 42px 50px 29px 0px;
+}
+
+.social {
     display: flex;
-    justify-content: space-between;
+    margin: 34px 0px 32px 0px;
 
-    .footer__logo {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 35px;
-        line-height: 43px;
-        color: #fff;
-        display: flex;
-        width: 144px;
-        height: 43px;
-        margin: 24px 0px 23px 0px;
+    .social__item {
+        text-decoration: none;
+        height: 24px;
+        width: 24px;
+        margin-left: 46px;
 
-        .footer__logo--elipse {
-            width: 12px;
-            height: 12px;
-            background: #FDF1FF;
-            border-radius: 30px;
-            margin: 18px 0px 20px 3px;
-        }
-    }
-
-    .footer__navigation {
-        display: flex;
-        justify-content: space-between;
-        width: 250px;
-        margin: 42px 0px 29px 0px;
-        
-        .footer__navigation__nav--item {
-            font-family: Maven Pro;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 16px;
-            line-height: 19px;
-            color: #fff;
-            text-decoration: none;
-
-            &:hover {
-                color: #E8C5ED;
-            }
-        }
-    }
-
-    .footer__link {
-        display: flex;
-        justify-content: space-between;
-        width: 100px;
-        margin: 34px 0px 32px 0px;
-
-        .footer__link__link--item {
-            text-decoration: none;
-            height: 24px;
-            width: 24px;
-
-            & :hover {
-                fill: #E8C5ED;
-            }
+        & :hover {
+            fill: #E8C5ED;
         }
     }
 }
 
+@media (max-width: 320px) {
+    .footer {
+        width: 320px; 
+    }
+
+    .logo--footer {
+        display: none;
+    }
+
+    .navigation--footer {
+        display: flex;
+        margin: 18px 0px 16px 0px;
+        padding: 0px;
+        
+        .navigation__nav--item {
+            font-size: 16px;
+            line-height: 19px;
+            margin-left: 39px;  
+        }
+        .calendar{
+            list-style: url(../images/Vectorcalendar.png);
+        }
+        .plans {
+            list-style: url(../images/Vectorsend.png);
+        }
+        .todo {
+            list-style: url(../images/Vectorcheck.png);
+        }
+    }
+
+    .social {
+        background-image: url(../images/dashicons-share.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 24px;
+        width: 24px;
+        margin: 16px 20px 16px 0px;
+    
+        .social__item {
+            display: none;
+        }
+    }
+}
 
     
