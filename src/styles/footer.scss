@@ -3,25 +3,54 @@
     background-color:#484B98;
     display: flex;
     justify-content: center;
-}
 
-.logo--footer {
-    margin: 23px 0px 24px 0px;
-}
+    @media (min-width: 768px) {
+        padding: 20px 0;
+    }
 
-.navigation--footer {
-    margin: 42px 50px 29px 0px;
+    @media (max-width: 767px) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
 }
 
 .social {
-    display: flex;
-    margin: 34px 0px 32px 0px;
+    display: none;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 12px 0;
 
-    .social__item {
+    &--absolute {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 44px;
+        width: calc(100% - 44px);
+        height: 100%;
+        background-color: #484B98;
+        margin: 0;
+        padding: 0 16px;
+    }
+
+    @media (min-width: 767px) {
+        display: flex;
+    }
+
+    &__item {
         text-decoration: none;
         height: 24px;
         width: 24px;
-        margin-left: 46px;
+
+        & + & {
+            margin-left: 24px;
+
+            @media (min-width: 1200px) {
+                margin-left: 46px;
+            }
+        }
 
         & :hover {
             fill: #E8C5ED;
@@ -29,48 +58,28 @@
     }
 }
 
-@media (max-width: 320px) {
-    .footer {
-        width: 320px; 
-    }
+.footer-center {
+    display: flex;
+    position: relative;
 
-    .logo--footer {
-        display: none;
-    }
-
-    .navigation--footer {
-        display: flex;
-        margin: 18px 0px 16px 0px;
-        padding: 0px;
-        
-        .navigation__nav--item {
-            font-size: 16px;
-            line-height: 19px;
-            margin-left: 39px;  
-        }
-        .calendar{
-            list-style: url(../images/Vectorcalendar.png);
-        }
-        .plans {
-            list-style: url(../images/Vectorsend.png);
-        }
-        .todo {
-            list-style: url(../images/Vectorcheck.png);
-        }
-    }
-
-    .social {
-        background-image: url(../images/dashicons-share.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 24px;
-        width: 24px;
-        margin: 16px 20px 16px 0px;
-    
-        .social__item {
-            display: none;
-        }
+    @media (max-width: 767px) {
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        margin-right: -15px;
     }
 }
 
-    
+.share {
+    @media (min-width: 768px) {
+        display: none;
+    }
+
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    background: #FDF1FF33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

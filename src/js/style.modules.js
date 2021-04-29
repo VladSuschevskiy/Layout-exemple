@@ -6,7 +6,6 @@ import '../styles/footer.scss';
 import '../styles/normalize.scss';
 import '../styles/card.scss'
 import '../app.js';
-import '../template.html';
 
 
 

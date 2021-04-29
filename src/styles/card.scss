@@ -1,4 +1,5 @@
 .card {
+    width: 100%;
     background-color: #fff;
     margin-bottom: 50px;
     box-shadow: 0px 0px 12px 4px #E0E1E5;
@@ -6,76 +7,70 @@
     & :hover {
         background-color: #FDF1FF;
     }
-}
 
-.card__discription {
-    position: relative;
-    padding: 10px 10px;
-
-    .card__discription-title {
-        font-family: Maven Pro;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 23px;
-        color: #6E6E6E;
-        margin-bottom: 46px;
+    &--editional {
+        background-color: transparent;
+        width: 262px;
+        height: 141px;
+        border: 2px solid #FDFDFD;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
     }
 
-    .card__discription-text {
-        margin-bottom: 12px;
-        font-family: Maven Pro;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 23px;
-        color: #6E6E6E;
+    @media only screen and (max-width: 320px) {
+        margin-bottom: 14px;
     }
 
-    .card__discription-date {
-        font-family: Maven Pro;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        color: #484B98;
+    &__image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 
-    .card__discription-link {
-        margin-top: 60px;
-        
-        & a {
-            text-decoration: none;
-            font-family: Maven Pro;
-            font-style: normal;
+    &__discription {
+        position: relative;
+        padding: 10px 10px;
+
+        &-title {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 23px;
+            color: #6E6E6E;
+            margin-bottom: 46px;
+        }
+
+        &-text {
+            margin-bottom: 12px;
             font-weight: 500;
-            font-size: 16px;
-            line-height: 22px;
+            font-size: 20px;
+            line-height: 23px;
             color: #6E6E6E;
         }
-    }
 
-    .card__discription-time {
-        font-family: Maven Pro;
-        position: absolute;
-        right: 10px;
-        bottom: 12px;
-    }
-}
+        &-date {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: #484B98;
+        }
 
-.card--editional {
-    background-color: transparent;
-    width: 262px;
-    height: 141px;
-    border: 2px solid #FDFDFD;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;    
-}
+        &-link {
+            margin-top: 60px;
 
+            a {
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                color: #6E6E6E;
+            }
+        }
 
-@media only screen and (max-width: 320px) {
-    .card {
-        margin-bottom: 14px;
+        &-time {
+            position: absolute;
+            right: 10px;
+            bottom: 12px;
+        }
     }
 }
