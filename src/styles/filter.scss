@@ -6,103 +6,71 @@
 }
 .checkbox-wrapper {
     padding: 40px 0px;
+    display: flex;
 
-    .checkbox {
-        position: relative;
-        .fake {
-            width: 18px;
-            height: 18px;
-            background: #E7E7EA;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            display: flex;
-            border-radius: 3px;
-            &:hover {
-                background-color: #E8C5ED;
-            }
-            &:active {
-                background-color: #FDF1FF;
-                background-image: url(../images/9mark.png);
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-            &:focus {
-                background-color: #E8C5ED;
-            }
-        }
-
-        .fake:not(:first-child){
-            margin-left: 100px;
-        }
-        .checkbox__check {
-            width: 20px;
-            height: 20px;
-            background: #E7E7EA;
-            border-radius: 2px;
-            margin-left: 26px;
-        }
-        
-        & span {
+    &--content {
+        .checkbox {
+            position: relative;
+            padding-left: 32px;
+            color: #6E6E6E;
             font-style: normal;
             font-weight: 500;
-            font-size: 20px;
+            font-size: 16px;
             line-height: 19px;
-            color: #6E6E6E;  
-        }
-
-        & span:not(:first-child){
-            margin-left: 50px;
-        }  
-    }
-
-    .checkbox:not(:first-child){
-        margin-top: 30px;
-    }
-}
-
-
-
-.filter__switch {
-    background: #E7E7EA;
-    border-radius: 2px;
-
-    .filter__switch--major {
-        background-color: transparent;
-    }
-
-    .filter__switch--minor {
-        background-color: transparent;
-    }
-}
-
-.filter__search {
-    display: flex;
-    justify-content: flex-end;
-    border-bottom: solid 1px #E7E7EA;
-    height: 30px;
-    width: 100%;
-
-    .filter__search__form-control-feedback {
-        background-image: url(../images/Vector.png);
-        width: 25px;
-        height: 25px;
-        border: none;
-        background-color: transparent;
-        background-repeat: no-repeat;
-        cursor: pointer;
-    }
-
-    .filter__search__form-control {
-        font-family: Maven Pro;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        color: #E7E7EA;
-        border: none;
-        outline: transparent;
-        width: 400px;
-    }
-}
+            
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
     
+            .fake {
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+    
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    background: #E7E7EA;
+                    border-radius: 2px;
+    
+                }
+    
+                &:hover {
+                    &:after {
+                        background-color: #E8C5ED;
+                    } 
+                }
+    
+                &:focus {
+                    border: none;
+                    outline: none;
+                    &:after {
+                        background-image: url(../images/9mark.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }  
+                }
+            }
+    
+            .checkbox__check {
+                display: none;
+            }
+    
+            .checkbox__check:checked + .fake {
+                &:after {
+                    background-color: #E7E7EA;
+                }
+            } 
+        }
+    }
+
+    &--content:not(:first-child) {
+        margin-left: 20px;
+    }
+}
+

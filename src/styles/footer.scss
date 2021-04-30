@@ -21,7 +21,7 @@
     width: 100%;
     margin: 12px 0;
 
-    &--absolute {
+    &-absolute {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -52,22 +52,27 @@
             }
         }
 
-        & :hover {
-            fill: #E8C5ED;
+        &:hover {
+            svg {
+                fill: #E8C5ED;
+            }
         }
 
-        & :focus {
-            fill: #E8C5ED;
-            // border: none;
-            // outline: none;
+        &:focus {
+            border: none;
+            outline: none;
+            
+            svg {
+                fill: #E8C5ED;
+            }
         }
-        
     }
 }
 
 .footer-center {
     display: flex;
     position: relative;
+    flex: auto;
 
     @media (max-width: 767px) {
         width: calc(100% + 30px);

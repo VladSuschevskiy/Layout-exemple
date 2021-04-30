@@ -1,47 +1,79 @@
 .card {
+    $self: &;
+
     width: 100%;
     background-color: #fff;
     margin-bottom: 30px;
     box-shadow: 0px 0px 12px 4px #E0E1E5;
 
-    & :hover {
-        background-color: #FDF1FF;
-    }
-    &:focus {
-        color: #FDF1FF;
-    }
-
-    &-editional {
+    &--editional {
+        width: 100%;
+        background-color: #fff;
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 12px 4px #E0E1E5;
         background-color: transparent;
         border: 2px solid #FDFDFD;
         box-sizing: border-box;
         display: flex;
         justify-content: center;
+        
+        &:hover {
+            border:2px solid #E8C5ED;
 
-        &-add {
-            height: 36px; 
-            width: 0px;
+            #{$self}__add {
+                border:1px solid #E8C5ED;
+            }
+        }
+
+        &:focus {
+            color: #FDF1FF;
+            border:2px solid #E8C5ED;
+            outline: none;
+
+            #{$self}__add {
+                border-color: #E8C5ED;
+            }
+        }
+    }
+
+    &:focus {
+        color: #FDF1FF;
+    }
+
+    @media only screen and (max-width: 320px) {
+        margin-bottom: 14px;
+    }
+
+    &__add {
+        height: 36px; 
+        width: 0;
+        position: relative; 
+        border: 1px solid #FDFDFD;
+        margin: 50px 0px;
+
+        &:after {
+            content: "";
+            height: 0; 
+            width: 36px;
+            position: absolute; 
+            left: -20px;
+            top: 17px;
+            border: 1px solid #FDFDFD;
+        }            height: 36px; 
+            width: 0;
             position: relative; 
             border: 1px solid #FDFDFD;
             margin: 50px 0px;
 
             &:after {
                 content: "";
-                height: 0px; 
+                height: 0; 
                 width: 36px;
                 position: absolute; 
                 left: -20px;
                 top: 17px;
                 border: 1px solid #FDFDFD;
             }
-        }
-        &:hover {
-            border:2px solid #E8C5ED;
-        }
-    }
-
-    @media only screen and (max-width: 320px) {
-        margin-bottom: 14px;
     }
 
     &__image {
