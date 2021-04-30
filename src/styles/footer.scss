@@ -55,6 +55,13 @@
         & :hover {
             fill: #E8C5ED;
         }
+
+        & :focus {
+            fill: #E8C5ED;
+            // border: none;
+            // outline: none;
+        }
+        
     }
 }
 

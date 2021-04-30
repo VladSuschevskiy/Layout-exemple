@@ -4,35 +4,64 @@
     display: flex;
     justify-content: center;
 }
+.checkbox-wrapper {
+    padding: 40px 0px;
 
-.checkbox {
-    padding-top: 30px;
-    padding-bottom: 38px;
-    
-    .checkbox__container {
-        width: 250px;
-        // justify-content: space-around;
-        display: flex;
-        margin-top: 10px;
+    .checkbox {
+        position: relative;
+        .fake {
+            width: 18px;
+            height: 18px;
+            background: #E7E7EA;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            display: flex;
+            border-radius: 3px;
+            &:hover {
+                background-color: #E8C5ED;
+            }
+            &:active {
+                background-color: #FDF1FF;
+                background-image: url(../images/9mark.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &:focus {
+                background-color: #E8C5ED;
+            }
+        }
 
+        .fake:not(:first-child){
+            margin-left: 100px;
+        }
         .checkbox__check {
             width: 20px;
             height: 20px;
             background: #E7E7EA;
             border-radius: 2px;
+            margin-left: 26px;
         }
-    
+        
         & span {
-            font-family: Maven Pro;
             font-style: normal;
             font-weight: 500;
             font-size: 20px;
             line-height: 19px;
-            color: #6E6E6E;
-            width: 125px;
+            color: #6E6E6E;  
         }
+
+        & span:not(:first-child){
+            margin-left: 50px;
+        }  
+    }
+
+    .checkbox:not(:first-child){
+        margin-top: 30px;
     }
 }
+
+
 
 .filter__switch {
     background: #E7E7EA;
@@ -49,10 +78,10 @@
 
 .filter__search {
     display: flex;
+    justify-content: flex-end;
     border-bottom: solid 1px #E7E7EA;
     height: 30px;
-    width: 350px;
-    margin-top: 52px;
+    width: 100%;
 
     .filter__search__form-control-feedback {
         background-image: url(../images/Vector.png);

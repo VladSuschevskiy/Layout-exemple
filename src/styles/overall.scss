@@ -1,16 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat:wght@100&display=swap');
-
 
 @import './grid';
 
 * {
     box-sizing: border-box;
+    font-family: Maven Pro;
 }
-
-//.body {
-//    margin-bottom: 90px;
-//}
 
 .navigation {
     $self: &;
@@ -50,9 +46,18 @@
                 color: #E8C5ED;
             }
 
-            > img {
+            &:focus {
+                color: #E8C5ED;
+                border: none;
+                outline: none;
+            }
+
+            > svg {
+                & :hover {
+                    fill:#E8C5ED;
+                }
                 @media (min-width: 768px) {
-                    display: none;
+                    display: none; 
                 }
             }
         }
@@ -66,8 +71,8 @@
 
                 &:hover{
                     &:before {
-                        background: #E8C5ED;
-                    }
+                        color: #E8C5ED;
+                    } 
                 }
             }
         }
